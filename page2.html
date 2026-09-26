@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รับสมัครนักศึกษา - มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="brand">
+            <div class="brand-logo"><img src="img/logo_kmutnb-(6).png" alt="Logo"></div>
+            <div>
+                <div class="brand-title">รับสมัครนักศึกษา</div>
+                <div class="brand-subtitle">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</div>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <a href="page6.html">ติดต่อเรา</a>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <div class="hero-banner">
+        <div class="hero-banner img">
+            <img src="img/img2.png" alt="Banner Image">
+        </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="nav-tabs-container">
+        <div class="nav-tabs">
+            <a href="page1.html" class="tab-item">
+                <i class="fa-regular fa-calendar-days"></i>
+                <span>สาขาที่เปิดรับสมัคร</span>
+            </a>
+            <a href="page2.html" class="tab-item active">
+                <i class="fa-regular fa-pen-to-square"></i>
+                <span>สมัครเรียน</span>
+            </a>
+            <a href="page3.html" class="tab-item">
+                <i class="fa-solid fa-list-check"></i>
+                <span>กำหนดการรับสมัคร</span>
+            </a>
+            <a href="page4.html" class="tab-item">
+                <i class="fa-solid fa-user-gear"></i>
+                <span>ขั้นตอนการสมัคร</span>
+            </a>
+            <a href="page5.html" class="tab-item">
+                <i class="fa-solid fa-book"></i>
+                <span>ค่าใช้จ่ายในการศึกษา</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="form-card">
+            <div class="form-section-title">
+                <i class="fa-regular fa-user"></i>
+                <span>ข้อมูลส่วนตัว</span>
+            </div>
+
+            <form action="#" method="POST">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">คำนำหน้า *</label>
+                        <select class="form-control">
+                            <option value="">เลือกคำนำหน้า</option>
+                            <option value="mr">นาย</option>
+                            <option value="mrs">นาง</option>
+                            <option value="miss">นางสาว</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">ชื่อ *</label>
+                        <input type="text" class="form-control" placeholder="ชื่อ">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">นามสกุล *</label>
+                        <input type="text" class="form-control" placeholder="นามสกุล">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">วันเดือนปีเกิด *</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">เพศ *</label>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="gender" value="male"> ชาย</label>
+                            <label class="radio-label"><input type="radio" name="gender" value="female"> หญิง</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">สัญชาติ *</label>
+                        <select class="form-control">
+                            <option value="th">ไทย</option>
+                            <option value="other">อื่นๆ</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">เลขประจำตัวประชาชน *</label>
+                        <input type="text" class="form-control" placeholder="0-0000-00000-00-0">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">ศาสนา *</label>
+                        <select class="form-control">
+                            <option value="">เลือกศาสนา</option>
+                            <option value="buddhism">พุทธ</option>
+                            <option value="islam">อิสลาม</option>
+                            <option value="christianity">คริสต์</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">เชื้อชาติ *</label>
+                        <select class="form-control">
+                            <option value="th">ไทย</option>
+                            <option value="other">อื่นๆ</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">เบอร์โทรศัพท์ *</label>
+                        <input type="tel" class="form-control" placeholder="08X-XXX-XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">อีเมล *</label>
+                        <input type="email" class="form-control" placeholder="example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">กลุ่มผู้สมัคร *</label>
+                        <select class="form-control">
+                            <option value="">เลือกกลุ่มผู้สมัคร</option>
+                            <option value="m6">ม.6</option>
+                            <option value="pvc">ปวช.</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section-title" style="margin-top: 24px;">
+                    <i class="fa-solid fa-house"></i>
+                    <span>ที่อยู่ตามทะเบียนบ้าน</span>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">บ้านเลขที่ *</label>
+                        <input type="text" class="form-control" placeholder="บ้านเลขที่">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">หมู่ที่</label>
+                        <input type="text" class="form-control" placeholder="หมู่ที่">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">ซอย</label>
+                        <input type="text" class="form-control" placeholder="ซอย">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">ถนน</label>
+                        <input type="text" class="form-control" placeholder="ถนน">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">ตำบล/แขวง *</label>
+                        <input type="text" class="form-control" placeholder="ตำบล/แขวง">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">อำเภอ/เขต *</label>
+                        <input type="text" class="form-control" placeholder="อำเภอ/เขต">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">จังหวัด *</label>
+                        <select class="form-control">
+                            <option value="">เลือกจังหวัด</option>
+                            <option value="bangkok">กรุงเทพมหานคร</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">รหัสไปรษณีย์ *</label>
+                        <input type="text" class="form-control" placeholder="รหัสไปรษณีย์">
+                    </div>
+                </div>
+
+                <div class="info-alert">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>กรุณาตรวจสอบข้อมูลให้ครบถ้วนถูกต้องก่อนดำเนินการต่อ</span>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary">บันทึกร่าง</button>
+                    <button type="button" class="btn btn-outline">ย้อนกลับ</button>
+                    <button type="submit" class="btn btn-primary">ดำเนินการต่อ <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ข้อตกลงเงื่อนไข</h4>
+                <p>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p>
+                <p>ระบบรับสมัครนักศึกษาออนไลน์</p>
+            </div>
+            <div class="footer-section">
+                <h4>ติดต่อเรา</h4>
+                <p>กลุ่มงานรับเข้าศึกษา กองบริการการศึกษา สำนักงานอธิการบดี</p>
+                <p>โทร. 02-555-2000 ต่อ 1628, 1637</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
