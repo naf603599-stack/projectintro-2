@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครเสร็จสิ้น - มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS เฉพาะสำหรับหน้าสมัครเสร็จสิ้น */
+        .success-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .success-header {
+            text-align: center;
+            padding-bottom: 24px;
+            border-bottom: 2px dashed #e2e8f0;
+            margin-bottom: 24px;
+        }
+
+        .success-icon {
+            font-size: 56px;
+            color: #10b981;
+            margin-bottom: 12px;
+        }
+
+        .app-no-box {
+            background: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            padding: 12px 24px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 1.1rem;
+        }
+
+        .payment-box {
+            background: #fff7ed;
+            border: 1px solid #ffedd5;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .payment-amount {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ea580c;
+        }
+
+        .qr-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+
+        .qr-code img {
+            width: 160px;
+            height: 160px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 8px;
+            background: #fff;
+        }
+
+        /* สำหรับการสั่งพิมพ์ (Print CSS) */
+        @media print {
+            .header, .hero-container, .nav-tabs-container, .form-actions, .footer, .btn-print-hide {
+                display: none !important;
+            }
+            .main-content {
+                padding: 0;
+                margin: 0;
+            }
+            .success-card {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Content -->
+    <main class="main-content" style="padding: 40px 20px;">
+        <div class="success-card" id="printable-area">
+            
+            <!-- หัวข้อสถานะ -->
+            <div class="success-header">
+                <i class="fa-solid fa-circle-check success-icon"></i>
+                <h2>บันทึกข้อมูลการสมัครเรียบร้อยแล้ว</h2>
+                <p style="color: #64748b;">โปรดชำระเงินค่าธรรมเนียมการสมัครเพื่อยืนยันสิทธิ์</p>
+                <div class="app-no-box">
+                    เลขที่ใบสมัคร: <strong style="color: #1e3a8a;">REG67-09482</strong>
+                </div>
+            </div>
+
+            <!-- ส่วนแจ้งชำระเงิน -->
+            <div class="payment-box">
+                <div style="text-align: center; margin-bottom: 12px;">
+                    <span style="font-size: 1.1rem; font-weight: 500;">ยอดเงินที่ต้องชำระ</span>
+                    <div class="payment-amount">500.00 บาท</div>
+                    <span style="color: #ef4444; font-size: 0.9rem;">
+                        <i class="fa-regular fa-clock"></i> กรุณาชำระเงินภายในวันที่ 30 พฤศจิกายน 2569 เวลา 23:59 น.
+                    </span>
+                </div>
+
+                <div class="qr-section">
+                    <div class="qr-code">
+                        <!-- ใส่ รูป QR Code หรือ PromptPay ของระบบ -->
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=KMUTNB-REG67-09482" alt="PromptPay QR Code">
+                    </div>
+                    <div style="font-size: 0.95rem; line-height: 1.6;">
+                        <strong>ช่องทางการชำระเงิน:</strong>
+                        <ol style="padding-left: 20px; margin-top: 4px;">
+                            <li>สแกน QR Code ด้วยโมบายแบงก์กิ้งได้ทุกธนาคาร</li>
+                            <li>ชำระผ่านเคาน์เตอร์ธนาคารกรุงไทย (ใช้ใบแจ้งชำระเงิน)</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ปุ่มดำเนินการ -->
+            <div class="form-actions btn-print-hide" style="justify-content: center; gap: 12px;">
+                <button type="button" class="btn btn-secondary" onclick="window.print()">
+                    <i class="fa-solid fa-print"></i> พิมพ์ใบสมัคร / ใบชำระเงิน
+                </button>
+                <button type="button" class="btn btn-primary" onclick="downloadPDF()">
+                    <i class="fa-solid fa-file-pdf"></i> ดาวน์โหลด PDF
+                </button>
+                <button type="button" class="btn btn-outline" onclick="window.location.href='page1.html'">
+                    <i class="fa-solid fa-house"></i> กลับสู่หน้าหลัก
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ไลบรารีสำหรับแปลงเป็น PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('printable-area');
+            const opt = {
+                margin:       10,
+                filename:     'ใบสมัคร_KMUTNB_REG67-09482.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2 },
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            
+            // ซ่อนปุ่มก่อนดาวน์โหลด
+            document.querySelector('.btn-print-hide').style.display = 'none';
+            
+            html2pdf().set(opt).from(element).save().then(() => {
+                // คืนค่าปุ่มหลังดาวน์โหลดเสร็จ
+                document.querySelector('.btn-print-hide').style.display = 'flex';
+            });
+        }
+    </script>
+</body>
+</html>

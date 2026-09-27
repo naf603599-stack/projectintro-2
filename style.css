@@ -79,22 +79,87 @@ body {
 }
 
 /* Banner */
-.hero-banner {
-    background: linear-gradient(135deg, #7b1fa2, #2196f3);
-    /* height: 200px; */ /* <--- ลบหรือคอมเม้นบรรทัดนี้ออก */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* padding: 0 40px; */ /* <--- ลบหรือคอมเม้นบรรทัดนี้ออก */
-    position: relative;
-    overflow: hidden;
-    color: white;
+/* Header / Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 80px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
 }
-.hero-banner img {
-    width: 100%;          /* ให้ภาพกว้างเต็มแบนเนอร์ */
-    height: 100%;         /* ให้ภาพสูงเต็มแบนเนอร์ */
-    object-fit: cover;    /* แสดงผลเต็มพื้นที่โดยไม่เสียสัดส่วน */
-    object-position: center; /* จัดตำแหน่งกึ่งกลางภาพ */
+
+.nav-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  color: #e65100;
+  border-bottom: 2px solid #e65100;
+  padding-bottom: 5px;
+}
+
+/* Hero Section */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 40px;
+}
+
+/* ป้ายปีการศึกษา */
+.badge-year {
+  background-color: #fbe9e7;
+  color: #d84315;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+  color: #1a1a1a;
+}
+
+.hero-desc {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* ปุ่มสมัครเรียน */
+.btn-apply {
+  display: inline-block;
+  background-color: #ff6f00;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(255, 111, 0, 0.3);
+}
+
+/* การตกแต่งรูปภาพฝั่งขวา */
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 16px; /* ทำมุมโค้งมนตามรูปภาพตัวอย่าง */
+  object-fit: cover;
 }
 
 .badge-new {
