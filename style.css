@@ -25,7 +25,13 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-
+.culta-img {
+    width: 1000px;
+    height: 1000px;
+    border-radius: 10%;
+    object-fit: cover;
+    border: 2px solid white;
+}
 
 .brand {
     display: flex;
